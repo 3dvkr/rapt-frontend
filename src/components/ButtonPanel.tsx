@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import shallow from "zustand/shallow";
+import { shallow } from "zustand/shallow";
 import { useTimerStore } from "../store";
 
 export function ButtonPanel({
@@ -43,7 +43,11 @@ export function ButtonPanel({
 					);
 				})}
 			</div>
-			<div className={`${isRunning && "btn-group"} col-start-3 sm:col-start-5 row-start-1`}>
+			<div
+				className={`${
+					isRunning && "btn-group"
+				} col-start-3 sm:col-start-5 row-start-1`}
+			>
 				<button
 					className={`btn ${isRunning ? "btn-warning" : "btn-success w-full"}`}
 					onClick={() => {
